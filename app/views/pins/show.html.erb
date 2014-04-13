@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @pin.video %>
+</p>
+
+<p>
+  <strong>Foto:</strong>
+  <%= @pin.foto %>
+</p>
+
+<p>
+  <strong>Ramo:</strong>
+  <%= @pin.ramo %>
+</p>
+
+<p>
+  <strong>Semestre:</strong>
+  <%= @pin.semestre %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @pin.fecha %>
+</p>
+
+<p>
+  <strong>Profesor:</strong>
+  <%= @pin.profesor %>
+</p>
+
+<p>
+  <strong>Carrera:</strong>
+  <%= @pin.carrera %>
+</p>
+
+<p>
+  <strong>Tiempo:</strong>
+  <%= @pin.tiempo %>
+</p>
+
+<%= link_to 'Edit', edit_pin_path(@pin) %> |
+<%= link_to 'Back', pins_path %>
