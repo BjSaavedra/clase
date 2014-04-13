@@ -1,41 +1,25 @@
-<h1>Listing pins</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Video</th>
-      <th>Foto</th>
-      <th>Ramo</th>
-      <th>Semestre</th>
-      <th>Fecha</th>
-      <th>Profesor</th>
-      <th>Carrera</th>
-      <th>Tiempo</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pins.each do |pin| %>
-      <tr>
-        <td><%= pin.video %></td>
-        <td><%= pin.foto %></td>
-        <td><%= pin.ramo %></td>
-        <td><%= pin.semestre %></td>
-        <td><%= pin.fecha %></td>
-        <td><%= pin.profesor %></td>
-        <td><%= pin.carrera %></td>
-        <td><%= pin.tiempo %></td>
-        <td><%= link_to 'Show', pin %></td>
-        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+<div class="container">
+<h1>Listado de videos</h1>
+  <div class="row">
+  <% @pins.each do |pin| %>
+    <div class="col-md-4">
+      <div class=" thumbnail">
+        <div class="videoWrapper"><%= tag(pin.video) %></div>
+        <div><%= image_tag(pin.foto) %></div>
+        <div><%= pin.ramo %></div>
+        <div><%= pin.semestre %></div>
+        <div><%= pin.fecha %></div>
+        <div><%= pin.profesor %></div>
+        <div><%= pin.carrera %></div>
+        <div><%= pin.tiempo %></div>
+        <div><%= link_to 'Show', pin %></div>
+        <div><%= link_to 'Edit', edit_pin_path(pin) %></div>
+        <div><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+<!--
 <%= link_to 'New Pin', new_pin_path %>
+-->

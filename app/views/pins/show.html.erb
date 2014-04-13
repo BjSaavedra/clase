@@ -1,13 +1,16 @@
-<p id="notice"><%= notice %></p>
-
+<h2>  <%= @pin.ramo %></h2>
+<div class="videoWrapper">
+  <%= tag(@pin.video) %>
+</div>
+<!--
 <p>
   <strong>Video:</strong>
-  <%= @pin.video %>
+  <%= tag(@pin.video) %>
 </p>
 
 <p>
   <strong>Foto:</strong>
-  <%= @pin.foto %>
+  <%= image_tag(@pin.foto) %>
 </p>
 
 <p>
@@ -42,3 +45,4 @@
 
 <%= link_to 'Edit', edit_pin_path(@pin) %> |
 <%= link_to 'Back', pins_path %>
+-->
