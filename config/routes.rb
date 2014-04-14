@@ -5,6 +5,8 @@ Clase::Application.routes.draw do
 
   devise_for :users
   get "welcome/index"
+  get 'bibloteca' => 'welcome#bibloteca'
+  get 'macroeconomia' => 'pins#macroeconomia' 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

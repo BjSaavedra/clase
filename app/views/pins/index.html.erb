@@ -1,25 +1,42 @@
+<div class="top">
+  <h1>Macroeconomía</h1>  
+</div>
+
 <div class="container">
-<h1>Listado de videos</h1>
+  <h1>Listado de videos</h1>
+</div>
+<% @pins.each do |pin| %>
+<div class="container">
   <div class="row">
-  <% @pins.each do |pin| %>
-    <div class="col-md-4">
-      <div class=" thumbnail">
-        <div class="videoWrapper"><%= tag(pin.video) %></div>
-        <div><%= image_tag(pin.foto) %></div>
-        <div><%= pin.ramo %></div>
-        <div><%= pin.semestre %></div>
-        <div><%= pin.fecha %></div>
-        <div><%= pin.profesor %></div>
-        <div><%= pin.carrera %></div>
-        <div><%= pin.tiempo %></div>
-        <div><%= link_to 'Show', pin %></div>
-        <div><%= link_to 'Edit', edit_pin_path(pin) %></div>
-        <div><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+    <div class="col-md-12">
+      <div class=" thumbnail row">
+        <div class="poster col-md-3">
+          <%= link_to image_tag(pin.foto, :class => 'img-responsive'), pin %>
+        </div>
+        
+        <div class="description  col-md-6">
+          <div><h2><%= pin.ramo %></h2></div>
+
+          <p> 
+            <span class="sub-description"><strong>Semestre:</strong> <%= pin.semestre %></span>
+            <span class="sub-description"><strong>Fecha:</strong> <%= pin.fecha%></span>
+          </p>
+          <p>
+            <span class="sub-description"><strong>Profesor:</strong> <%= pin.profesor %></span>
+            <span class="sub-description"><strong>Carrera:</strong> <%= pin.carrera %></span>
+          </p>
+          <p>
+            <span class="sub-description"><strong>Duración:</strong> <%= pin.tiempo %></span>
+          </p>
+        </div>
       </div>
     </div>
-  <% end %>
   </div>
 </div>
 <!--
 <%= link_to 'New Pin', new_pin_path %>
+<div><%= link_to 'Show', pin %></div>
+<div><%= link_to 'Edit', edit_pin_path(pin) %></div>
+<div><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></div>
 -->
+<% end %>
