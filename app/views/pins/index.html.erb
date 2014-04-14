@@ -11,7 +11,7 @@
     <div class="col-md-12">
       <div class=" thumbnail row">
         <div class="poster col-md-3">
-          <%= link_to image_tag(pin.foto, :class => 'img-responsive'), pin %>
+          <%= link_to image_tag(pin.foto, :class => 'img-responsive', :onclick => "mixpanel.track("video");",), pin %>
         </div>
         
         <div class="description  col-md-6">

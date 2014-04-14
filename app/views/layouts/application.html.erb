@@ -19,5 +19,8 @@
 </div>
 <%= yield %>
 
+<% if Rails.env.production? %>
+	<%= render 'shared/mixpanel' %>
+<% end %>
 </body>
 </html>

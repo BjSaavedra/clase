@@ -21,7 +21,7 @@
 		</div>
 
 		<div>
-			<%= f.submit "Sign up", :class => 'btn btn-default pull-left' %>
+			<%= f.submit "Sign up", :class => 'btn btn-default pull-left', :onclick => "mixpanel.track("nuevo usuario");" %>
 		</div><br>
 		<% end %>
 		<hr>

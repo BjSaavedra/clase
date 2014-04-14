@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="form-group log">
-<h2>Time of study?</h2>
+<h2>Hora de estudiar?</h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div><%= f.label :email %><br />
@@ -13,7 +13,7 @@
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
   <% end -%>
 
-  <div><%= f.submit "Ingresar", :class => 'btn btn-default pull-left' %></div>
+  <div><%= f.submit "Ingresar", :class => 'btn btn-default pull-left', :onclick => "mixpanel.track("nuevo ingreso");" %></div>
 <br>
 <% end %>
 <hr>
