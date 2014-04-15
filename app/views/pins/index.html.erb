@@ -8,7 +8,7 @@
 <% @pins.each do |pin| %>
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
       <div class=" thumbnail row">
         <div class="poster col-md-3">
           <%= link_to image_tag(pin.foto, :class => 'img-responsive', :onclick => "mixpanel.track("video");",), pin %>
