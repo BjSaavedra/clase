@@ -6,8 +6,7 @@ body {
 
 nav {
 	margin-bottom:0px !important;	
-    border-bottom:2px #eeeeee solid;
-
+    border-bottom:1px #cecece solid !important;
 }
 
 .navbar-default {
