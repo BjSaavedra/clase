@@ -82,7 +82,7 @@ box-shadow: inset 0 3px 9px rgba(0,0,0,.075);
     font-weight: lighter;
 }
 .all {
-	background:url(http://riotdesign.eu/assets/img/home-slider/bg-goodssolutions.jpg) center center fixed;
+	background:url(https://www.engageforagencies.com/media/img/choose_partners/partners_is_coming-6bb67c4b359c666a0093d06a0807a4b540b0b655.jpg) center center fixed;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
     background-size: cover;
@@ -126,6 +126,67 @@ box-shadow: inset 0 3px 9px rgba(0,0,0,.075);
 	padding: 0;
 }
 
+.row figure:hover{
+	-webkit-transform: scale(1.02);
+	-moz-transform:scale(1.02);
+	transform: scale(1.02);
+	opacity:1;
+
+}
+.row:hover figure:not(:hover) {
+	opacity: 0.4;
+}
+
+div.row figure {
+	margin: 0 0px 15px;
+	opacity: 1;
+	-webkit-transition: all .8s ease;
+	-moz-transition: all .8s ease;
+	-o-transition: all .8s ease;
+	transition: all .8s ease;
+}
+
+figure h2,span {
+	color: black;
+}
+
+/*
+.poster img:hover .overlay {
+  background: #FFF;
+  opacity:0.8;
+}
+
+.poster:hover .playButton {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 0 auto;
+  background: url(http://immedesign.nl/cssdeck/next.png) center center no-repeat #0076ED;
+  opacity: .7;
+  animation-delay: inherit;
+  animation:scale .5s eaea;   
+  cursor: pointer;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0 0;
+  background: #000;
+  opacity:0;
+  transition: all 1s ease;
+}
+/*
+.playButton {
+  width: 123px;
+  height: 123px;
+  margin: 0 auto 0 auto;
+  background: url(http://immedesign.nl/cssdeck/next.png) center center no-repeat;
+  opacity: 0;
+  border-radius: 50%;
+  transition: all .2s ease;
+}
+*/
+
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
@@ -147,6 +208,8 @@ p>.sub-description {
 .paginator {
 	margin: 20px auto;
 }
+
+
 
 /* DEVISE*/
 

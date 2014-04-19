@@ -3,7 +3,9 @@ class PinsController < ApplicationController
   before_filter :authenticate_user!, only: [:show]
 
   def macroeconomia 
-    @pins = macroeconomia.pins
+    @pins = Pin.all
+    # retrieve all Bookmarks ordered by descending creation timestamp
+    @pins = Pin.order('created_at desc')
   end
 
   # GET /pins

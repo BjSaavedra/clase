@@ -10,18 +10,14 @@
   
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <%= render 'shared/ga' %>
   <%= csrf_meta_tags %>
-</head>
 <body>
 <%= render 'shared/navbar' %>
 <div style="display:none;">
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 </div>
 <%= yield %>
-
-
-<%= render 'shared/ga' %>
-
 </body>
 </html>
