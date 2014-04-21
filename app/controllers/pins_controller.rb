@@ -2,7 +2,7 @@ class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, only: [:show]
 
-  def macroeconomia 
+  def macroeconomia
     @pins = Pin.all
     # retrieve all Bookmarks ordered by descending creation timestamp
     @pins = Pin.order('created_at desc')
@@ -12,6 +12,7 @@ class PinsController < ApplicationController
   # GET /pins.json
   def index
     @pins = Pin.all
+    @pins = Pin.order('created_at desc')
   end
 
   # GET /pins/1
