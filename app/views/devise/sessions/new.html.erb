@@ -1,5 +1,8 @@
 <div class="container">
-	<div class="form-group log">
+	<div class="well">
+		<h3>Para ver los videos debes estar registrado, <%= link_to "pincha aquí", new_registration_path(resource_name) %></h3>
+	</div>
+<div class="form-group log">
 <h2>Hora de estudiar?</h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
