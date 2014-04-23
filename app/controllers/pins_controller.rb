@@ -1,5 +1,5 @@
 class PinsController < ApplicationController
-  before_action :set_pin, only: [:show, :edit, :update, :destroy]
+  before_action :set_pin, only: [:show]
   before_filter :authenticate_user!, only: [:show]
 
   def macroeconomia
