@@ -4,6 +4,7 @@ ruby "2.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
+gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
 
 # Use sqlite3 as the database for Active Record
@@ -48,4 +49,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'devise'

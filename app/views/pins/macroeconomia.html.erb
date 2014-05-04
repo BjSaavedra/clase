@@ -2,37 +2,37 @@
   <h1>Macroeconomía</h1>  
 </div>
 
-<div class="container ">
-  <h1>Listado de videos</h1>
-</div>
-<div class="container ">
-  <div class="row">
-<% @pins.each do |pin| %>
-    <%= link_to(pin) do %>
-    <figure class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-      <div class=" thumbnail row">
-        <div class="poster col-md-3 col-lg-3 col-sm-3 col-xs-3">
-          <%= image_tag(pin.foto, :class => 'img-responsive', :alt => pin.ramo) %>
-      </div>
-        
-        <div class="description col-md-6 col-lg-6 col-sm-9 col-xs-9">
-          <div><h2><%= pin.ramo %></h2></div>
+<div class="containerPin">
+  <div class="container">
+    <h1>Listado de videos</h1>
+    <div class="row">
+      <% @pins.each do |pin| %>
+      <%= link_to(pin) do %>
+      <figure class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class=" thumbnail row">
+          <div class="poster col-md-3 col-lg-3 col-sm-3 col-xs-3">
+            <%= image_tag(pin.foto, :class => 'img-responsive', :alt => pin.ramo) %>
+          </div>
+          
+          <div class="description col-md-6 col-lg-6 col-sm-9 col-xs-9">
+            <div><h2><%= pin.ramo %></h2></div>
 
-          <p> 
-            <span class="sub-description"><strong>Semestre:</strong> <%= pin.semestre %></span>
-            <span class="sub-description"><strong>Fecha:</strong> <%= pin.fecha%></span>
-          </p>
-          <p>
-            <span class="sub-description"><strong>Profesor:</strong> <%= pin.profesor %></span>
-            <span class="sub-description"><strong>Carrera:</strong> <%= pin.carrera %></span>
-          </p>
-          <p>
-            <span class="sub-description"><strong>Duración:</strong> <%= pin.tiempo %></span>
-          </p>
+            <p> 
+              <span class="sub-description"><strong>Semestre:</strong> <%= pin.semestre %></span>
+              <span class="sub-description"><strong>Fecha:</strong> <%= pin.fecha%></span>
+            </p>
+            <p>
+              <span class="sub-description"><strong>Profesor:</strong> <%= pin.profesor %></span>
+              <span class="sub-description"><strong>Carrera:</strong> <%= pin.carrera %></span>
+            </p>
+            <p>
+              <span class="sub-description"><strong>Duración:</strong> <%= pin.tiempo %></span>
+            </p>
+          </div>
         </div>
-      </div>
-    </figure>
-    <% end %>
-<% end %>
-</div>
+      </figure>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>

@@ -1,5 +1,5 @@
 ActiveAdmin.register Pin do
-
+  permit_params :video, :foto, :ramo, :semestre, :fecha, :profesor, :carrera, :tiempo
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

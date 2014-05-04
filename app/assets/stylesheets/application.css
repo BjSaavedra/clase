@@ -110,6 +110,9 @@ box-shadow: inset 0 3px 9px rgba(0,0,0,.075);
 }
 
 /* PIN */
+.containerPin {
+	background-color: #f8f9fa;
+}
 
 .top {
   color: white;
@@ -151,6 +154,10 @@ div.row figure {
 	-moz-transition: all .8s ease;
 	-o-transition: all .8s ease;
 	transition: all .8s ease;
+}
+
+.thumbnail{
+	padding: 0px;
 }
 
 figure h2,span {
